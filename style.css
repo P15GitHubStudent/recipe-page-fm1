@@ -1,0 +1,79 @@
+
+@font-face {
+  font-family: 'Outfit';
+  src: URL('assets\\fonts\\outfit\\Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YoungSerifRegular';
+  src: URL('assets\\fonts\\young-serif\\YoungSerif-Regular.ttf') format('truetype');
+}
+
+
+
+:root{
+	--white: hsl(0, 0%, 100%);
+	--stone-100: hsl(30, 54%, 90%);
+	--stone-150: hsl(30, 18%, 87%);
+	--stone-600: hsl(30, 10%, 34%);
+	--stone-900: hsl(24, 5%, 18%);
+	--brown-800: hsl(14, 45%, 36%);
+	--rose-800: hsl(332, 51%, 32%);
+	--rose-50: hsl(330, 100%, 98%);
+	--font-weight-normal: 400;
+	--font-weight-medium: 600;
+	--font-weight-bold: 700;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: "Outfit";
+	background-color: var(--stone-600);
+}
+
+.container
+{
+	width: 100%;
+	min-height: 100vh;
+	border: 1px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card
+{
+	width: 500px;
+	height: 800px;
+	background-color: var(--white);
+	border-radius: 1rem;
+
+}
+
+.card-content
+{
+	margin: 1.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-content img
+{
+	display: inline-block;
+	min-width: 100%;
+	height: auto;
+	border-radius: 0.5rem; /*Why inherit did not woerk ? */
+}
+
+.card-content h1
+{
+	font-family: ;
+	font-weight: var(--font-weight-medium);
+}
