@@ -1,3 +1,17 @@
+/*
+New Tricks 
+@font-face {
+  font-family: 'NewTricks';
+  src: URL('assets\\fonts\\new-tricks\\NewTricks-Regular.ttf') format('truetype');
+}
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector
+
+li::marker
+list-style-type: disc;
+
+*/
+
 
 @font-face {
   font-family: 'Outfit';
@@ -20,6 +34,7 @@
 	--brown-800: hsl(14, 45%, 36%);
 	--rose-800: hsl(332, 51%, 32%);
 	--rose-50: hsl(330, 100%, 98%);
+	--rose-100: hsl(330, 100%, 96%);
 	--font-weight-normal: 400;
 	--font-weight-medium: 600;
 	--font-weight-bold: 700;
@@ -42,7 +57,6 @@ body{
 {
 	width: 100%;
 	min-height: 100vh;
-	border: 1px solid green;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -57,23 +71,110 @@ body{
 
 }
 
+
+.text-bold
+{
+	font-weight: bold;
+}
+
 .card-content
 {
 	margin: 1.5rem;
 	display: flex;
 	flex-direction: column;
-}
 
-.card-content img
-{
-	display: inline-block;
-	min-width: 100%;
-	height: auto;
-	border-radius: 0.5rem; /*Why inherit did not woerk ? */
-}
+	& .card-content__description 
+	{
+		& img{
+			display: inline-block;
+			width: 100%;
+			border-radius: 1rem;
+		}
 
-.card-content h1
-{
-	font-family: ;
-	font-weight: var(--font-weight-medium);
+		& p{
+			font-size: 0.7rem;
+			color: var(--stone-600);
+		}
+
+		& h1{
+			font-size: 1.8rem;
+			color: var(--stone-900);
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			font-weight: var(--font-weight-bold);
+		}
+		
+	}
+
+	& .card-content__ingredients
+	{
+		font-size: 0.7rem;
+
+		& p{
+			color: var(--brown-800);
+			font-size: 1.5rem;
+		}
+		
+	}
+
+
+	& .card-content__preparation
+	{
+		margin: 2rem;
+		font-family: "YoungSerifRegular";
+		font-size: 0.7rem;
+		color: var(--stone-600);
+		background-color: var(--rose-50);
+
+		& p{
+			color: var(--rose-800);
+		}
+
+		& ul{
+			margin-top: 1rem;
+			list-style-type: disc;
+			font-weight: var(--font-weight-normal);
+			margin-left: 1.5rem;
+
+			& li{
+				margin-bottom: 0.5rem;
+			}
+
+			& li::marker{
+				color: var(--rose-800);
+			}
+
+		}
+	}
+	
+
+	& .card-content__preparation
+	{
+		margin: 2rem;
+		font-family: "YoungSerifRegular";
+		font-size: 0.7rem;
+		color: var(--stone-600);
+		background-color: var(--rose-50);
+
+		& p{
+			color: var(--rose-800);
+		}
+
+		& ul{
+			margin-top: 1rem;
+			list-style-type: disc;
+			font-weight: var(--font-weight-normal);
+			margin-left: 1.5rem;
+
+			& li{
+				margin-bottom: 0.5rem;
+			}
+
+			& li::marker{
+				color: var(--rose-800);
+			}
+
+		}
+	}
+
 }
