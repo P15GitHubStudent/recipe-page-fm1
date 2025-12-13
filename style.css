@@ -4,7 +4,7 @@ New Tricks
   font-family: 'NewTricks';
   src: URL('assets\\fonts\\new-tricks\\NewTricks-Regular.ttf') format('truetype');
 }
-
+What about recipes with more text
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector
 
 li::marker
@@ -65,10 +65,10 @@ body{
 .card
 {
 	width: 500px;
-	height: 800px;
+	max-height: 100vh;
 	background-color: var(--white);
 	border-radius: 1rem;
-
+	overflow: scroll;
 }
 
 
@@ -106,28 +106,18 @@ body{
 		
 	}
 
-	& .card-content__ingredients
+
+	& .card-content__ingredients, & .card-content__instructions
 	{
-		font-size: 0.7rem;
-
-		& p{
-			color: var(--brown-800);
-			font-size: 1.5rem;
-		}
-		
-	}
-
-
-	& .card-content__preparation
-	{
-		margin: 2rem;
+		margin: 0.5rem;
 		font-family: "YoungSerifRegular";
-		font-size: 0.7rem;
+		font-size: 0.6rem;
 		color: var(--stone-600);
-		background-color: var(--rose-50);
+		border-bottom: 1px solid var(--stone-150);
 
 		& p{
-			color: var(--rose-800);
+			font-size: 1.2rem;
+			color: var(--brown-800);
 		}
 
 		& ul{
@@ -140,12 +130,17 @@ body{
 				margin-bottom: 0.5rem;
 			}
 
+			& li:last-child{
+				margin-bottom: 1rem;
+			}
+
 			& li::marker{
 				color: var(--rose-800);
 			}
 
 		}
 	}
+
 	
 
 	& .card-content__preparation
