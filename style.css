@@ -141,7 +141,13 @@ body{
 		}
 	}
 
-	
+	& .card-content__instructions
+	{
+		& ul{
+			list-style-type: decimal;
+		}
+	}
+
 
 	& .card-content__preparation
 	{
