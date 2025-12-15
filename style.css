@@ -69,12 +69,18 @@ body{
 	background-color: var(--white);
 	border-radius: 1rem;
 	overflow: scroll;
+	font-size: 0.7rem;
 }
 
 
 .text-bold
 {
 	font-weight: bold;
+}
+
+.color-rose-800
+{
+	color: var(--rose-800);
 }
 
 .card-content
@@ -105,7 +111,6 @@ body{
 		}
 		
 	}
-
 
 	& .card-content__ingredients, & .card-content__instructions
 	{
@@ -146,6 +151,38 @@ body{
 		& ul{
 			list-style-type: decimal;
 		}
+	}
+
+	& .card-content__nutrition
+	{
+		& p:first-child{
+			font-size: 1.2rem;
+			color: var(--brown-800);
+			margin-bottom: 0.5rem;
+		}
+
+		& .nutrition-values
+		{
+			display: flex;
+			flex-direction: column;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			gap: 0.5rem;
+
+			& .nutrition-value-row
+			{
+		
+				justify-content: space-around;
+				padding-bottom: 0.5rem;
+				display: flex;
+				border-bottom: 1px solid var(--stone-150);
+			}
+
+
+		}
+
+		
+
 	}
 
 
