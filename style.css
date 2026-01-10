@@ -49,6 +49,9 @@ https://gwfh.mranftl.com/fonts
   src: url('../fonts/young-serif-v2-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
+img{
+	max-width: 100%;
+	height: auto;
+}
 
 
