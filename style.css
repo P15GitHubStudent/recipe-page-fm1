@@ -66,7 +66,18 @@ body
   background-color: var(--color-background);
 	margin: 0;
   font-family: 'Outfit', Arial, Helvetica, sans-serif;
-  padding-bottom: 50vh;
+}
+
+h1,
+h2
+{
+  font-family: 'Young Serif', Georgia, 'Times New Roman', Times, serif;
+  line-height: 1;
+}
+
+h1
+{
+  font-size: 2rem;
 }
 
 
@@ -79,15 +90,33 @@ img{
 {
   display: grid;
   place-items: center;
-  padding-block: 8rem;
+  
+
+  /* Style that applies for screen greater than 68.75 rem*/
+  @media (width >= 68.75rem)
+  {
+    padding-block: 8rem;
+  }
+
 }
 
 .recipe
 {
-  max-width: 52rem;
   background-color: var(--color-background-recipe);
+
+  @media (width >= 68.75rem)
+  {
+    max-width: 52rem;
+    border-radius: 12px;
+    padding: 36px;
+  }
+
 }
 
+.recipe__image
+{
+  border-radius: 10px;
+}
 
 
 
